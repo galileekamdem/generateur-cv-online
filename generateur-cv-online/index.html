@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de CV</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Créez votre CV en ligne</h1>
+        
+        <!-- Formulaire de saisie -->
+        <form id="cv-form">
+            <label for="name">Nom complet :</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+
+            <label for="skills">Compétences (séparées par des virgules) :</label>
+            <input type="text" id="skills" placeholder="Ex: HTML, CSS, JavaScript">
+
+            <button type="submit">Générer mon CV</button>
+        </form>
+
+        <!-- Aperçu du CV -->
+        <div id="cv-preview" class="hidden">
+            <h2 id="preview-name"></h2>
+            <p id="preview-email"></p>
+            <h3>Compétences</h3>
+            <ul id="preview-skills"></ul>
+        </div>
+
+        <!-- Bouton d'export PDF -->
+        <button id="export-pdf" class="hidden">Télécharger en PDF</button>
+    </div>
+
+    <!-- On ajoute jsPDF pour l'export PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Notre fichier JS -->
+    <script src="scripts/app.js"></script>
+</body>
+</html>
